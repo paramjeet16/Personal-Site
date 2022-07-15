@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    
+    <title> Changing CSS Properties with Javascript </title>
+    
+    <style>
+    
+        body {background-color: white;}
+        
+        #customText {font-size: 16px;
+                    color: black;
+                    font-family: times new roman;}
+        
+        .special {background-color: white;
+                font-size: 14px;
+                width: 60px;
+                border: 1px solid black;
+                border-radius: 20px;
+                padding-top: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 5px;
+                box-shadow: 2px 2px 0px black;
+                cursor: pointer;}
+        
+        .special:hover {background-color: lightgreen;
+                        box-shadow: 4px 4px 0px black;
+                        transform: translate(-2px, -2px);}
+    
+        .special:active {background-color: darkgreen;
+                        color: white;
+                        box-shadow: 0px 0px 0px black;
+                        transform: translate(2px, 2px);}
+        
+        
+    </style>
+    
+    <script>
+    // make a function to change the page's background color to red
+        function changeToRed() {
+            // change the page's backgroundColor to red
+            document.body.style.backgroundColor = "red";
+            // change the text inside of customText
+            document.getElementById("customText").innerHTML = "This page is now red.";
+            //change the color of customText
+            document.getElementById("customText").style.color = "white";
+            //change the location of customText
+            document.getElementById("customText").style.transform = "translate(50px, 50px)";
+            //change the fontFamily of customText
+            document.getElementById("customText").style.fontFamily = "comic sans ms";
+            //change the fontSize of customText
+            document.getElementById("customText").style.fontSize = "60px";
+        } // end of changToRed() 
+        
+        
+        
+        // make a function to change the page's background color to white
+        function changeToWhite() {
+             document.body.style.backgroundColor = "white";
+            document.getElementById("customText").innerHTML = "This page is now white.";
+            document.getElementById("customText").style.color = "black";
+            document.getElementById("customText").style.transform = "translate(0px, 0px)";
+            document.getElementById("customText").style.fontFamily = "times new roman";
+            document.getElementById("customText").style.fontSize = "16px";
+        } // end of changeToWhite()
+        
+        
+        
+        
+    
+    
+    </script>
+    
+    
+    
+    
+</head>
+
+<body>
+    
+    <h1>
+        Changing CSS Properties with Javascript
+    </h1>
+    
+    
+    <input type="button" value="Red" class="special" onclick="changeToRed();">
+    
+    <input type="button" value="Blue" class="special" onclick="">
+    
+    <input type="button" value="Green" class="special" onclick="">
+    
+    <input type="button" value="Yellow" class="special" onclick="">
+    
+    <input type="button" value="White" class="special" onclick="changeToWhite();">
+    
+    <p id="customText">
+    This page is white.
+    </p>
+    
+    
+    
+
+    </body>
+
+</html>

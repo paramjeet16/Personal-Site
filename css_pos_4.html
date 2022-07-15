@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="utf-8">
+    
+    <title> CSS Layout #4 </title>
+    
+    <style>
+    
+        body {background-color: purple;}
+        
+        div#container {position:static;
+        box-sizing: border-box;
+        background-color: yellow;
+        width: 600px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+        border-top-right-radius: 50px;}
+        
+        header {position:static;
+                box-sizing:border-box;
+                background-color:orange;
+                width: 600px;
+                height: 100px;
+                border-top-right-radius: 50px;
+                background-image: url(logo.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 0px -70px;}
+    
+        nav {position:static;
+            box-sizing:border-box;
+            background-color:pink;
+            width: 150px;
+            height: 450px;
+            padding-left: 10px;
+            padding-top: 10px;
+            float: left;}
+        
+        article {position: static;
+                box-sizing: border-box;
+                background-color: white;
+                width: 450px;
+                height: 450px;
+                float: left;
+                padding-left:20px;
+                padding-right: 20px;
+                padding-top: 10px;
+                overflow:auto;}
+        
+        footer {position: static;
+                box-sizing: border-box;
+                background-color:coral;
+                width:600px;
+                height:50px;
+                clear: both;
+                padding-top: 10px;
+                text-align:center;}
+        
+        h1, h2{margin-top: 0px;
+        margin-bottom: 0px;
+        
+        }
+        
+        
+        h2 {font-family: impact;
+        letter-spacing: 2px;
+        font-weight: 100;}
+        
+        @font-face {font-family: my_font_1;
+        src: url(pokemon.ttf);}
+        
+        h1{font-family: my_font_1;
+            text-align: center;
+            font-size: 48px;
+            letter-spacing: 3px;
+            color:white;
+            text-shadow: 2px 2px 0px black;}
+        
+        
+        p {font-family: ariel;
+        font-size: 16px;
+        line-height: 22px;
+        text-indent: 30px;}
+        
+        a {font-family: arial;
+        font-size: 22px;
+        line-height: 32px}
+        
+        a:link {color:red;}
+        
+        a:visited {color:red;}
+        
+        a:hover {text-decoration: none;
+        font-size:26px;
+        color: green;}
+        
+        a:active {font-style:italic;
+        color: darkgreen;
+        text-decoration: line-through;}
+        
+        small {font-family: arial;
+        font-size: 10px;}
+        
+    </style>
+    
+    
+    
+    </head>
+<body>
+    
+    <div id="container">
+    
+        <header>
+        
+        <h1> This is the header </h1>
+        
+        </header>
+    <nav>
+        <a href="#">Link 1</a> 
+        <br>
+        <a href="#">Link 2</a>
+        <br>
+        <a href="#">Link 3</a>
+        </nav>
+        
+        
+        <article>
+        
+        <h2>This is the Article</h2>
+            
+            <p>
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel purus lorem. Mauris laoreet, neque nec pellentesque tincidunt, turpis nisl bibendum sapien, in fringilla arcu metus at nisl. Quisque et sollicitudin tellus, vitae mattis mauris. Aenean diam velit, egestas eu justo at, tincidunt dictum magna. Aenean maximus nisl sit amet dui lacinia placerat. In faucibus lorem scelerisque neque venenatis, lobortis eleifend elit placerat. Etiam finibus odio sit amet tortor condimentum, ac consectetur lectus egestas. Duis molestie, nibh at tincidunt hendrerit, quam lectus ultrices purus, sit amet fermentum est enim at diam. Donec imperdiet, odio vitae pharetra luctus, elit purus feugiat ligula, vitae suscipit magna turpis ac sem. Nam sit amet ante sed tortor lobortis pretium. Pellentesque tincidunt sed dolor in cursus. Duis laoreet mauris non fermentum bibendum. Aliquam et lacinia tortor. Aliquam et ipsum tortor. Duis posuere luctus urna ac ullamcorper. Fusce urna quam, auctor sed pretium nec, venenatis non nisi.
+</p>
+            
+            <p>
+        Nunc non porta sem. Nam viverra eu leo sed tincidunt. Integer hendrerit ullamcorper massa, at tempus leo consectetur euismod. Phasellus vitae aliquet lacus. Vivamus blandit sem vel elit laoreet consectetur. Sed ut nunc volutpat, dapibus ipsum vitae, convallis neque. Nullam nec enim non quam molestie molestie. Donec ut dolor id lacus laoreet lacinia non nec odio. Ut ultricies, tellus in imperdiet finibus, turpis metus luctus erat, eget congue dolor nibh nec nunc. Ut ut massa quis ipsum porttitor lobortis. Integer tincidunt vel quam ac hendrerit. Vestibulum libero enim, rhoncus id consectetur a, dapibus et tellus.
+</p>
+            <p>
+        Donec placerat quis nisl a gravida. Fusce quis urna vel dui aliquet elementum sit amet quis tortor. Cras ullamcorper posuere diam a consectetur. Donec finibus mauris purus, non tincidunt tellus accumsan a. Integer ultricies blandit elit. Curabitur dignissim ac lorem a semper. Vivamus mattis, arcu vel aliquet condimentum, dui erat ultricies lorem, eu congue felis purus vel risus. Maecenas ornare molestie est, quis maximus magna consectetur sit amet.
+</p>
+            <p>
+                
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris sollicitudin ut eros a fringilla. Aliquam ullamcorper erat vel diam fringilla elementum. Proin porta ipsum metus, ac fringilla nunc lacinia et. Morbi at nulla sollicitudin, volutpat nisi id, consectetur urna. Praesent congue euismod eros id posuere. Nullam nec arcu ac odio molestie interdum.
+</p>
+                <p>
+                
+        Maecenas condimentum metus urna, a hendrerit mauris euismod non. Ut varius suscipit tincidunt. Suspendisse vulputate, nisl nec viverra tempor, justo ante tincidunt ante, in convallis eros turpis nec neque. Aliquam sodales libero et auctor viverra. Aliquam a sem consequat, ornare elit ultricies, commodo sapien. Praesent euismod sed elit ut posuere. Curabitur purus nibh, suscipit a quam eget, dignissim luctus nunc. Ut nisi lacus, tempus at dui ac, placerat vestibulum arcu. Etiam accumsan ultricies velit at aliquam. Ut quam quam, placerat quis nibh at, molestie facilisis nulla. Cras in tincidunt lacus.
+            </p>
+            
+            
+            
+            
+        </article>
+        
+        <footer>
+            <small>
+                    This is the footer
+                </small>
+        </footer>
+    
+    
+    </div>
+    
+    
+    </body>
+
+
+</html>

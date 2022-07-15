@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+    
+            <meta charset="utf-8">
+            
+            <title> Math with JavaScript </title>
+            
+            <style>
+                body {background-color: lightblue;
+                        font-size: 24px;}
+                
+                input {font-size: 24px;}
+            
+                input:hover {background-color: lightgreen;}
+                
+                
+            
+            </style>
+            
+            <script>
+            // function to add numbers together 
+                function addNumbers() {
+                    // make a variable for the value of box 1
+                    var value1 = 
+                        parseFloat(document.getElementById("box1").value);
+                    // make a variable for the value of box 2
+                    var value2 = 
+                        parseFloat(document.getElementById("box2").value);
+                    // make a variable called total
+                    var total = value1 + value2; 
+                    // put total in the answer span
+                    document.getElementById("answer").innerHTML = total;
+                    // put a + sign in the sign span
+                    document.getElementById("sign").innerHTML = "+";
+                    
+                    
+                } // end of addNumbers() function
+                
+                
+                
+                
+            
+                // make a function to subtract the numbers
+                function subtractNumbers() {
+                    var value1 = parseFloat(document.getElementById("box1").value);
+                    var value2 = parseFloat(document.getElementById("box2").value);
+                    var total = value1 - value2;
+                    document.getElementById("answer").innerHTML = total;
+                    document.getElementById("sign").innerHTML = "-";
+                    
+                    
+                }
+                
+                
+                
+                // make a function to multiply the numbers
+                function multiplyNumbers() {
+                    var value1 = parseFloat(document.getElementById("box1").value);
+                    var value2 = parseFloat(document.getElementById("box2").value);
+                    var total = value1 * value2;
+                    document.getElementById("answer").innerHTML = total;
+                    document.getElementById("sign").innerHTML = "x";
+                    
+                    
+                }
+                
+                
+                
+                
+                // make a function to divide the numbers
+                function divideNumbers(){
+                    var value1 = parseFloat(document.getElementById("box1").value);
+                    var value2 = parseFloat(document.getElementById("box2").value);
+                    var total = value1 / value2;
+                    document.getElementById("answer").innerHTML = total;
+                    document.getElementById("sign").innerHTML = "&divide";
+                    
+                    
+                    
+                }
+                
+                
+                
+                // make a function to clear everything 
+                function clearAll() { 
+                    document.getElementById("box1").value = "";
+                    document.getElementById("box2").value = "";
+                    document.getElementById("answer").innerHTML = "";
+                    document.getElementById("sign").innerHTML = "&nbsp;";
+                    
+                }
+                
+                
+                
+            
+            
+            
+            </script>
+    
+    
+        </head>
+    
+    <body>
+    
+        <h1>
+                Math with Javascript
+        
+        </h1>
+     
+        
+        <input type="text" size="5" id="box1">
+        
+        <span id="sign">
+        
+        &nbsp; &nbsp;
+        
+        </span>
+        
+        <input type="text" size="5" id="box2">
+        
+        =
+        
+        <span id="answer">
+        
+        &nbsp;
+        
+        </span>
+        
+        <br> <br> 
+        
+        <input type="button" value="Add" onclick="addNumbers();">
+        
+        <input type="button" value="Subtract" onclick="subtractNumbers();">
+        
+         <input type="button" value="Multiply" onclick="multiplyNumbers();">
+        
+        <input type="button" value="Divide" onclick="divideNumbers();">
+        
+        <input type="button" value="Clear" onclick="clearAll();">
+    
+    
+    
+    </body>
+</html>

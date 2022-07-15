@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    
+    <title> Javascript Greeting </title>
+    
+    <style>
+    
+        body {background-color: lightyellow;
+                font-size: 24px;}
+        
+        input {font-size: 24px;}
+        
+        input:hover {background-color: lime;}
+        
+        input:focus {background-color: yellow;
+                    color: blue;}
+        
+        div#entryArea {position: static;
+                        box-sizing: border-box;
+                        background-color: lightblue;
+                        width: 680px;
+                        padding: 25px;
+                        font-weight: bold;
+                        border: 3px dashed white;}
+        
+        div#messageArea {position: static;
+                        box-sizing: border-box;
+                        background-color: lightgreen;
+                        width: 680px;
+                        padding: 25px;
+                        font-size: 32px;
+                        border: 3px dotted green;}
+    
+    </style>
+    
+    <script>
+    // make a function to hide messageArea by default
+        function hideMessageArea() {
+            document.getElementById("messageArea").style.display="none";
+        }
+    
+        function greetVisitor() {
+            // get the value of yourName and make it a variable
+            var name = document.getElementById("yourName").value;
+            // un-hide messageArea
+            document.getElementById("messageArea").style.display = "block";
+            // write the greeting into messageArea
+            document.getElementById("messageArea").innerHTML = "Hello, <strong> " + name + "</strong>, how are you today?";
+            // hide entryArea
+            document.getElementById("entryArea").style.display = "none";
+        }
+    
+    </script>
+    
+    
+    
+    
+    
+</head>
+
+
+<body onload="hideMessageArea();">
+    
+    
+    
+    <div id="entryArea">
+    
+        Enter Your Name:
+        
+        <input type="text" size="20" id="yourName">
+        
+        <input type="button" value="Click Me" onclick="greetVisitor();">
+    
+    </div> <!-- end of entryArea -->
+    
+    
+    
+    
+    <div id="messageArea">
+        
+        The dynamic greeting will appear here.
+    
+    </div> <!-- end of messageArea -->
+    
+    
+
+    
+    
+    
+</body> 
+</html>

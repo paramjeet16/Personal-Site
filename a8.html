@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <meta charset="utf-8">
+    
+    <title> Assignment #8 </title>
+    
+    <style>
+    
+        body {background-color: lightyellow;
+            color: black;
+            font-size: 24px;}
+        
+        h1 {margin-top: 0px;
+            margin-bottom: 10px;}
+        
+        input, select {font-size: 24px;}
+                        
+        
+        
+        
+    
+    </style>
+    
+    <script>
+    
+    function calculateTotal() {
+     var total = new Number;
+        
+        if (document.getElementById("small").selected) {
+           total = 10.00;
+             document.getElementById("size").style.color= "black";
+           }
+        else if (document.getElementById("medium").selected) {
+           total = 12.50; 
+            document.getElementById("size").style.color= "black";
+        }
+        else if (document.getElementById("large").selected) {
+                total = 15.00;
+            document.getElementById("size").style.color= "black";
+        }
+       else {
+                 alert("Please select a size.");
+           document.getElementById("size").style.color= "red";
+           // change the size text to red for homework 
+        } 
+        
+        //add costs for extra toppings
+        // extra cheese
+        if (document.getElementById("extracheese").checked) {
+            total = total + 2;
+            }
+        
+        
+         if (document.getElementById("Pepperoni").checked) {
+            total = total + 1;
+            }
+        
+        if (document.getElementById("Sausage").checked) {
+            total = total + 1;
+            }
+        
+        if (document.getElementById("Bacon").checked) {
+            total = total + 1;
+            }
+        
+        if (document.getElementById("Chicken").checked) {
+            total = total + 1;
+            }
+        
+        if (document.getElementById("Onion").checked) {
+            total = total + 0.50;
+            }
+        
+        
+        // add 5 other toppings here for homework
+        // each is its own if statement; no else or else if needed 
+        
+        // add 11.25% sales tax to the cost of food
+        total = total + (total * 0.1125);
+        
+        
+        // add delivery charge for homework
+         if (document.getElementById("Delivery").checked) {
+            total = total + 3;
+             document.getElementById("pickupOrDelivery").style.color= "black";
+            }
+        
+         else if (document.getElementById("Pickup").checked) {
+            total = total + 0;
+             document.getElementById("pickupOrDelivery").style.color= "black";
+            }
+        
+           else {
+                 alert("Please select to either Pickup or Deliver your Order.");
+               document.getElementById("pickupOrDelivery").style.color= "red";
+      
+        } 
+        
+        
+        
+        // change the size text to red for homework 
+        
+        
+        
+        
+        
+      // write the result to output
+        document.getElementById("output").innerHTML = "Your total cost is $" + total.toFixed(2);
+   
+        
+    } // end of calculateTotal() function
+    
+    </script>
+    
+    
+    
+    
+</head>
+<body>
+    
+   <h1> Order a Pizza </h1>
+    
+    <p id="size">
+        What size Do You Want? 
+        
+        <select name="size">
+        <option value="" id="n-size">
+            </option>
+        <option value="small" id="small">
+            Small - $10.00
+            </option>
+        <option value="medium" id="medium">
+            Medium - $12.50
+            </option>
+            <option value="large" id="large">
+            Large - $15.00
+            </option>
+        </select>
+
+    </p>
+    
+    <p>
+    
+    What Toppings Do You Want?
+        <br>
+        <input type="checkbox" id="extracheese" 
+               value="extracheese"> Extra Cheese (add $2.00)
+        <br>
+         <input type="checkbox" id="Pepperoni" 
+               value="Pepperoni"> Pepperoni (add $1.00)
+        <br>
+        <input type="checkbox" id="Sausage"
+               value="Sausage"> Sausage (add $1.00)
+        
+        <br>
+         <input type="checkbox" id="Bacon"
+               value="Bacon"> Bacon (add $1.00)
+        
+        <br>
+        <input type="checkbox" id="Chicken"
+               value="Chicken"> Chicken (add $1.00)
+        
+        <br>
+         <input type="checkbox" id="Onion"
+               value="Onion"> Onion (add $0.50)
+    
+    </p>
+    
+    <p id="pickupOrDelivery">
+        
+        Pickup or Delivery?
+        
+        <br>
+        
+    
+        <input type="radio" name="Method" id="Pickup"
+               Value="Pickup"> Pickup
+        
+        <br>
+         <input type="radio" name="Method" id="Delivery"
+               Value="Delivery"> Delivery (add $3.00)
+        
+    </p>
+    
+    <p>
+    <small>
+        Note: 11.25% sales tax will be 
+        added to the cost of your pizza.
+        
+        </small>
+    <br>
+    <br>
+         <input type="button" value="Calculate Order" 
+                onclick="calculateTotal();">
+
+    </p>
+
+    <p id="output">
+    &nbsp;
+    </p>
+    
+</body>
+</html>
